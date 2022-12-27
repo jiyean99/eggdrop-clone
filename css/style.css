@@ -1,0 +1,863 @@
+@charset "utf-8";
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900&display=swap');
+
+@font-face{
+    font-family: "AppleSDGothicNeo";
+    src: url("../fonts/AppleSDGothicNeoB.woff") format('woff');
+    src: url("../fonts/AppleSDGothicNeoEB.woff") format('woff');
+    src: url("../fonts/AppleSDGothicNeoM.woff") format('woff');
+    src: url("../fonts/AppleSDGothicNeoR.woff") format('woff');
+    src: url("../fonts/AppleSDGothicNeoSB.woff") format('woff');
+    src: url("../fonts/AppleSDGothicNeoL.woff") format('woff');
+}
+@font-face{
+    font-family: "novabold";
+    src: url("../fonts/NOVABOLD.woff") format('woff');
+}
+@font-face{
+    font-family: "mayeka";
+    src: url("../fonts/Mayeka\ Bold\ Demo.woff")format('woff');
+    src: url("../fonts/Mayeka\ Demi\ Bold\ Demo.woff")format('woff');
+    src: url("../fonts/Mayeka\ Regular\ Demo.woff") format('woff');
+    src: url("../fonts/Mayeka\ Thin\ Demo.woff")format('woff');
+    src: url("../fonts/Mayeka_Light\ Demo.woff")format('woff');
+}
+@font-face{
+    font-family: "cocomat";
+    src: url("../fonts/Cocomat\ Light-trial.woff") format('woff');
+    src: url("../fonts/Cocomat\ Ultralight-trial.woff") format('woff');
+}
+@font-face{
+    font-family: 'SupremeLL',sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    src: url(../font/Rabbid\ Highway\ Sign\ IV.woff) format('woff');
+    }
+@font-face{
+    font-family: 'FuturaStd-Medium';
+    src: url(../font/FuturaStd-Medium.woff) format('woff');
+}    
+@font-face{
+    font-family: 'FuturaStd-Light';
+    src: url(../font/FuturaStd-Light.woff) format('woff');
+}   
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "AppleSDGothicNeo","Noto Sans KR", sans-serif ; 
+    width: 100%;
+    text-transform: uppercase;
+    overflow-x: hidden;
+    background-color: #fff;
+    box-sizing:border-box; 
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.clearfix::after{
+    content: '';
+    clear: both;
+    display: block;
+    line-height: 0;
+}
+/* button 기본 세팅 */
+button{
+    width: 215px;
+    height: 56px;
+    border-radius: 28px;
+    text-align: left;
+    padding-left: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    background: url("https://eggdrop.co.kr/assets/images/common/icon_arrow_right.svg") no-repeat ;
+    background-size: 35px 29px;
+    background-position: right 30px center;
+    font-weight: 900;
+    cursor: pointer;
+    border: 3px solid #000;
+}
+
+button:hover{
+    border: #ea0029;
+    color: #fff;
+    background: url("https://eggdrop.co.kr/assets/images/common/icon_arrow_right_white.svg") no-repeat ;
+    background-size: 35px 29px;
+    background-position: right 30px center;
+    font-weight: 900;
+    background-color: #ea0029;
+}
+/* header */
+header{
+    max-width: 100%;
+    text-transform: uppercase;
+    font-family: "AppleSDGothicNeo", sans-serif;
+    height: 83px;
+    border: 0px solid red;
+    position: relative;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    z-index: 600;
+}
+.sticky{
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+}
+.header{
+    width: 1147px;
+    margin: 0 auto;
+}
+nav{
+    border: 0px solid orange;
+    display: inline-block;
+}
+.logo{
+    width: 142px;
+    margin: 12px 55px 0 0;
+    float: left;
+    
+}
+.logo>a>svg{
+    width: 142px;
+    height: 23px;
+    fill: black;
+    padding: 19px 0;
+}
+.gnb{
+    font-family: "mayeka";
+    float: left;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.015rem;
+    padding-top: 30px;
+}
+.gnb>ul>li{
+    float: left;
+    width: 170px;
+}
+.gnb>ul>li:hover a{
+    color: #ea0029;
+}
+.gnb a{
+    position: relative;
+}
+.gnb>ul>li>a::after{
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    border-radius: 3px;
+    background: #ea0029;
+    opacity: 0;
+    transition: 0.3s;
+}
+.gnb>ul>li:hover >a::after{
+    opacity: 1;
+    bottom: -12px;
+    height: 3px;
+}
+.header-btn{
+    margin-top: 23px;
+    float: left;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #010101;
+    color: #fff;
+    line-height: 2.7rem;
+    font-size: 22px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+.header-btn:hover{
+    background-color: #ea0029;
+    color: white;
+}
+.headerlang{
+    float: left;
+    font-size: 14px;
+    margin:37px 0 0 60px;
+}
+.gnb::before{
+    border: 1px solid red;
+    border: none;
+    content: '';
+    width: 100%;
+    height: 0px;
+    background-color: rgba(255, 255, 255);
+    position: absolute;
+    top: 83px;    
+    left: 0;
+    clear: both;
+    transition: 0.5s;
+    z-index: -1;
+    /* z-index: 3; */
+}
+.gnb:hover::before{
+    height: 300px;
+}
+.sub-menu{
+    padding-top: 60px;
+    opacity: 0;
+    transition: 0.9s;
+    display: none;
+}
+.sub-menu li{
+    font-size: 17px;
+    width: 170px;
+    padding-bottom: 18px;
+}
+.sub-menu li:hover{
+    color: #ea0029;
+    cursor: pointer;
+}
+.gnb:hover .sub-menu{
+    opacity: 1;
+    display: block;
+}
+.gnb>ul>li>ul>li{
+    z-index: 999;
+}
+/* main */
+main{
+    position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.main-slide{
+    overflow: hidden;
+    /* max-width: 1920px; */
+    border: 0px solid orange;
+    /* margin: 0 auto; */
+}
+.main-img-panel{
+    width: 600%;
+    height: 930px;
+    border: 0px solid chartreuse;
+}
+.main-img-panel>li{
+    float: left;
+    width: 16.666%;
+}
+.main-img-panel>li>img{
+    width: 100%;
+    height: 930px;
+    object-fit: cover;
+}
+.main-indi{
+    max-width: 1147px;
+    margin: 0 auto;
+    /* border: 1px solid blue; */
+    transform: translateY(-30px);
+}
+.main-indi>li{
+    width: 10px;
+    height: 10px;
+    background-color: #acacac;
+    border-radius: 5px;
+    float: left;
+    cursor: pointer;
+    margin: 0 15px;
+}   
+.main-indi>li.indi-on{
+    width: 10px;
+    height: 10px;
+    background-color: #010101;
+    border-radius: 5px; 
+    /* transition: all 0.5s linear; */
+}
+.main-scroll{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 0px solid red;
+    padding-bottom: 20px;
+    background: url('https://eggdrop.co.kr/assets/images/common/icon_bottom.svg') no-repeat bottom/25px auto;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+/* fixed-icon*/
+.fixed-icon{
+    width: 89px;
+    z-index: 10;
+    text-align: right;
+    position: fixed;
+    bottom: 40px;
+    right: 330px;
+}
+.fixed{
+    position: absolute;
+    bottom: 398px;
+}
+.fixed-icon>.scroll-top{
+    margin-top: 30px;
+    font-size: 1.25rem;
+    font-weight: bolder;
+    color: black;
+}
+.fixed-icon>.scroll-top>img{
+    margin-bottom: 15px;
+    margin-right: 5px;
+}
+.scroll-top{
+    cursor: pointer;
+}
+.scroll-top:hover img{
+    animation: jump 0.6s linear infinite alternate both;
+}
+@keyframes jump {
+    50%{transform: translateY(-10px);}
+    100%{transform: rotateY(-5px);}
+}
+.popfirst{
+    position: absolute;
+    bottom: 70px;
+    cursor: pointer;
+}
+.popfirst>div>img:first-child{
+    transform: translateY(6px);
+}
+/* popup */
+.popup{
+    z-index: 100;
+    text-transform: capitalize;
+    width: 450px;
+    height: 571px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0px;
+    right: 0;
+}
+.popup h4{
+    cursor: pointer;
+    font-size: 1.2rem;
+    line-height: 3rem;
+    padding: 0 60px;
+}
+.popup h4 span{
+    margin-left: 70px;
+}
+/* section-1 */
+.section-1{
+    max-width: 100%;
+}
+.sec1-top{
+    width: 1147px;
+    margin: 0 auto;
+    border: 0px solid red;
+}
+.sec-title{
+    font-family: "novabold";
+    /* font-family: 'FuturaStd-Medium'; */
+    /* font-family: "mayeka"; */
+    /* font-family: "cocomat"; */
+    font-size: 80px;
+    letter-spacing: -0.03rem;
+    font-weight: lighter;
+    text-align: center;
+    padding-top: 120px;
+    line-height: 0.7rem;
+}
+.sec1-nav{
+    width: 960px;
+    height: 50px;
+    border: 0px solid blue;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+}
+.sec1-nav li{
+    float: left;
+    cursor: pointer;
+}
+.active{
+    color: #ea0029;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+/* sliding menu */
+#slidingMenu{
+    max-width: 100%;
+    overflow: hidden;
+}
+.sliding-box{
+    max-width: 3360px;
+    height: 750px;
+    border: 0px solid red;
+    position: relative;
+    margin: 0 auto;
+}
+.containner{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 100%; 
+    height: 700px;
+    border: 0px solid orange;
+    overflow: hidden;
+}
+.containner>li>div{
+    margin-top: 100px;
+    padding-right: 12px;
+    width: 408px;
+    height: 594px;
+    overflow: hidden;
+    float: left;
+    border: 0px solid blue;
+    transition: 0.3s;
+}
+figure{
+    position: relative;
+}
+figcaption{
+    text-align: center;
+    padding-top: 35px;
+}
+.s-text img,.s-img img{
+    max-width: 100%;
+    vertical-align: middle;
+    transition: 0.8s;
+}
+.containner>li>div:hover .s-img img{
+    transform: translateY(-150px);
+}
+.containner>li>div:hover{
+    margin-top: 0px;
+}
+.s-mark{
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 260px;
+    right: 20px;
+    opacity: 0;
+    transition: 0.8s;
+}
+.containner>li>div:hover .s-mark{
+    opacity: 1;
+}
+/* section-2 */
+.section-2{
+    max-width: 100%;
+    height: 900px;
+    background-color: #f0ffaa;
+    margin-top: 40px;
+    overflow: hidden;
+}
+.section-2 div:first-child{
+    margin: 0 auto;
+    max-width: 1147px;
+    height: 900px;
+    border: 0px solid red;
+    position: relative;
+}
+.section-2 div:first-child>div{
+    padding: 80px 0 0 135px;
+}
+.section-2 div h3{
+    font-size: 18px;
+    font-weight: 900;
+    padding-bottom: 40px;
+}
+.section-2 div h4{
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 40px;
+}
+.sect2-img1{
+    position: absolute;
+    right: -200px;
+    bottom: 0;
+    z-index: 2;
+}
+.sect2-img1 img{
+    width: 847px;
+    height: 730px;
+}
+.sect2-img2{
+    position: absolute;
+    top: 0px;
+    right: -300px;
+}
+.sect2-img2>img{
+    width: 447px;
+    height: 447px;
+    background-repeat: no-repeat;
+    animation: rotate 10s linear infinite ;
+}
+@keyframes rotate {
+    100%{transform: rotate(360deg);}
+}
+/* section-3 */
+.section-3{
+    max-width: 100%;
+    height: 670px;
+    border: 0px solid red;
+    position: relative;
+    /* overflow: hidden; */
+}
+.sec3-main{
+    font-family: "NotoSansKR";
+    width: 690px;
+    height: 130px;
+    margin: 0 auto;
+    border: 0px solid cadetblue;
+    position: relative;
+}
+.sec3-main button{
+    position: absolute;
+    right: 0;
+    top: 3px;
+    margin-top: 13px;
+}
+.sec3-main p,.sec3-main h4{
+    display: inline-block;
+}
+.sec3-main>div>span{
+    display: block;
+    width: 480px;
+    height: 2px;
+    background-color: #000;
+    margin: 4px 0;
+}
+.e-gps{
+    width: 44px;
+    height: auto;
+}
+.sec3-main h4{
+    font-size: 18px;
+}
+.sec3-main p{
+    font-size: 14px;
+    color: #989898;
+    font-weight: 600;
+    transform: translateY(-7px);
+}
+.sec3-extra{
+    font-family: "NotoSansKR";
+    padding-top: 40px;
+    width: 690px;
+    height: 130px;
+    border: 0px solid black;
+    margin: 0 auto;
+}
+.sec3-extra>div>div{
+    display: block;
+    float: left;
+}
+.sec3-extra dt{
+    font-size: 15px;
+   font-weight: 900;
+   padding-bottom: 20px;
+}
+.sec3-extra dd{
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.08rem;
+    line-height: 1.5rem;
+}
+/* .sec3-bg img{
+    width: auto;
+    height: 700px;
+    transform: rotate(-20deg);
+    filter:opacity(10%);
+    position: absolute;
+    left: 50%;
+    margin-left: 300px;
+    top: 0;
+    z-index: -1;
+} */
+.sec3-bg{
+    display: block;
+    fill: black;
+    width: 668px;
+    height: 710px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: 270px;
+    z-index: -1;
+}
+.sec3-bg>svg{
+    width: 100%;
+    height: 100%;
+}
+/* section-4 */
+.section-4{
+    max-width: 100%;
+    height: 820px;
+    border: 0px solid;
+    position: relative;
+    /* overflow: hidden; */
+}
+.sec4{
+    width: 1900px;
+}
+.section-4 div:nth-of-type(1){
+    text-align: center;
+}
+.sec4-bg{
+    width: 940px;
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    z-index: -1;
+}
+.sec4-txt{
+    position: absolute;
+    right: 50%;
+    margin-right: -950px;
+    width: 680px;
+    padding-top: 150px;
+}
+.sec4-txt{
+    font-family: "NotosansKR";
+    font-size: 16px;
+}
+.sec4-txt button{
+    margin-top: 50px;
+}
+/* section-5 */
+.section-5{
+    max-width: 100%;
+    height: 880px;
+    position: relative;
+    /* overflow: hidden; */
+}
+.sec5-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    background-image: linear-gradient(90deg, transparent 0, transparent 98.95833%, #000 0, #000), linear-gradient(transparent, transparent 98.95833%, #000 0, #000);
+    background-repeat: repeat;
+    background-position: 50%;
+    background-size: 192px auto, auto 192px;
+    z-index: -2;
+}
+.sec5-txt-bg{
+    width: 100%;
+    height: 540px;
+    background-color: #d8e9f5;
+    position: absolute;
+    left: 50%;
+    margin-left: -600px;
+    top: 20%;
+    /* transform: translateY(-50%); */
+    /* 슬라이드효과때문에 삭제 */
+    z-index: -1;
+}
+.sec5-txt{
+    width: 1147px;
+    height: 540px;
+    margin: 0 auto;
+    padding-top: 280px;
+    display: flex;
+    justify-content: space-around;
+}
+.sec5-l h2{
+    padding: 10px 0 50px 0;
+}
+.sec5-r h3{
+    color: #000;
+    cursor: pointer;
+    font-family: "mayeka";
+    font-size: 1.1rem;
+    font-weight: 800;
+    width: 600px;
+    background: url("https://eggdrop.co.kr/assets/images/common/icon_arrow_right.svg") no-repeat;
+    background-position: right 0px center;
+    text-align: left;
+}  
+.sec5-r p{
+    color: #000;
+    font-family: "mayeka";
+    margin: 25px 0;
+    font-size: 1.008rem;
+    font-weight: 800;
+}
+.sec5-r h3::after{
+    content: '';
+    background-color: #000;
+    width: 600px;
+    height: 1px;
+    margin: 15px 0;
+    display: block;
+}
+/* section-6 */
+.section-6{
+    width: 100%;
+    height: 720px;
+    background-color:#ffbe9f;
+    text-align: center;
+    overflow: hidden;
+}
+.section-6 div{
+    margin: 0 auto;
+    width: 1127px;
+}
+.image-box>article{
+    display: inline-block;
+}
+.image-box>article>div{
+    float: left;
+    margin: 0 6px;
+    width: 210px;
+    height: 210px;
+    overflow: hidden;
+}
+.layout1:hover,.layout2:hover,.layout3:hover,.layout4:hover,.layout5:hover,.layout6:hover,.layout7:hover,.layout8:hover,.layout9:hover,.layout10:hover{
+    background-size: 120%;
+}
+.layout1{
+    background: url("https://eggdrop.co.kr/upload/main/1704415800.jpg") no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transition: 0.5s;
+}
+.layout2{
+    background: url("https://eggdrop.co.kr/upload/main/1667631169.jpg") no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transition: 0.5s;
+}
+.layout3{
+    background: url("https://eggdrop.co.kr/upload/main/1628728613.jpg") no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transition: 0.5s;
+}
+.layout4{
+    background: url("https://eggdrop.co.kr/upload/main/1628729485.jpg") no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transition: 0.5s;
+}
+.layout5{
+    background: url("https://eggdrop.co.kr/upload/main/1715130961.jpg") no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transition: 0.5s;
+}
+.layout6{
+    background: url("https://eggdrop.co.kr/upload/main/1715131007.jpg") no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transition: 0.5s;
+}
+.layout7{
+    background: url("https://eggdrop.co.kr/upload/main/1667631419.jpg") no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transition: 0.5s;
+}
+.layout8{
+    background: url("https://eggdrop.co.kr/upload/main/1715131065.jpg") no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transition: 0.5s;
+}
+.layout9{
+    background: url("https://eggdrop.co.kr/upload/main/1696554868.jpg") no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transition: 0.5s;
+}
+.layout10{
+    background: url("https://eggdrop.co.kr/upload/main/1636077460.png") no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transition: 0.5s;
+}
+/* footer */
+footer{
+    width: 100%;
+    height: 330px;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+}
+.footer{
+    /* background:url("../images/favicon-w.png") no-repeat;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position: left; */
+    width: 1147px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.footer h1{
+    background: url("../images/favicon-w.png") no-repeat;
+    background-position: left 0 center;
+    background-size: 50px;
+    width: 500px;
+    padding-left: 45px;
+    height: 50px;
+    line-height: 50px;
+}
+.foot-left{
+    float: left;
+}
+.foot-left>ul>li{
+    font-size: 20px;
+    margin: 10px 0 0 48px;
+    cursor: pointer;
+}
+.foot-right{
+    float: right;
+}
+.input-lang{
+    width: 110px;
+    height: 36px;
+    background-color: #000;
+    border: none;
+    border-bottom: 3px solid white;
+    color: white;
+    float: left;
+}
+svg{
+    fill: #fff;
+    width: 23.329px;
+    height: 23.329px;
+}
+.foot-sns{
+    padding-left: 300px;
+}
+.foot-sns>li{
+    float: left;
+    padding: 10px;
+}
+.footer-info1{
+    clear: both;
+    font-size: 16px;
+    padding-top: 30px;
+}
+.footer-info2{
+    font-size: 16px;
+    padding-top: 20px;
+    line-height: 1.5rem;
+}

@@ -302,7 +302,7 @@ main{
     right: 330px;
 }
 .fixed{
-    position: absolute;
+    /* position: absolute; */
     bottom: 398px;
 }
 .fixed-icon>.scroll-top{
@@ -411,10 +411,10 @@ main{
     position: absolute;
     bottom: 0;
     left: 0;
-    max-width: 100%; 
+    /* width: 100%;  */
+    width: 1000%;
     height: 700px;
     border: 0px solid orange;
-    overflow: hidden;
 }
 .containner>li>div{
     margin-top: 100px;
@@ -622,20 +622,26 @@ figcaption{
 .sec4-bg{
     width: 940px;
     position: absolute;
-    right: 50%;
+    right: 51%;
     bottom: 0;
     z-index: -1;
 }
 .sec4-txt{
+    font-family: "AppleSDGothicNeo";
     position: absolute;
     right: 50%;
     margin-right: -950px;
     width: 680px;
     padding-top: 150px;
 }
-.sec4-txt{
-    font-family: "NotosansKR";
-    font-size: 16px;
+.sec4-txt h2{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.sec4-txt h3{
+    font-size: 18px;
+    font-weight: 500;
 }
 .sec4-txt button{
     margin-top: 50px;

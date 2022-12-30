@@ -51,13 +51,13 @@ function slide(){
     }
 
     // md
-    $(function () {
-        setInterval(function () {
-            $(".containner").animate({ marginLeft: -408 }, 500, function () {
-                $(this).css({ marginLeft: 0 }).find("div:last").after($(this).find("div:first"));
-            })
-        }, 2000);
-    });
+    // $(function () {
+    //     setInterval(function () {
+    //         $(".containner").animate({ marginLeft: -408 }, 500, function () {
+    //             $(this).css({ marginLeft: 0 }).find("div:last").after($(this).find("div:first"));
+    //         })
+    //     }, 2000);
+    // });
 
     
     init();
@@ -125,56 +125,56 @@ $(function(){
 
 
 /////section-1 slide 재시도1
-// function slidingMenu(){
-//     var now = 0;
-//     var show = 8; //li갯수 (var length와 동일한 것)
-//     var $containner = $(".containner");  //ul(li*6 포함)
-//     var length = $(".containner>li").length;//총 li의 갯수 (6개) (show와 다른점은 인덱스로 불러올 갯수)
-//     var view = $(".sliding-box").width(); 
-//     var move = view/show; //한칸씩 움직이는 크기
-//     var maxWidth = 10080; //최대 가로값
+function slidingMenu(){
+    var now = 0;
+    var show = 8; //li갯수 (var length와 동일한 것)
+    var $containner = $(".containner");  //ul(li*6 포함)
+    var length = $(".containner>li").length;//총 li의 갯수 (6개) (show와 다른점은 인덱스로 불러올 갯수)
+    var view = $(".sliding-box").width(); 
+    var move = view/show; //한칸씩 움직이는 크기
+    var maxWidth = 10080; //최대 가로값
     
-//     //초기화
-//     $containner.css("width","length*move"); //2460px
+    //초기화
+    $containner.css("width","length*move"); //2460px
     
-//      //슬라이드
-//         //★ 갖춰야할 명령 1.이동(한칸씩 왼쪽으로) 2.무한반복 3.인덱스값 초기화 4.마우스오버시 반복정지 등등
-//         //1-1) 0번 인덱스가 왼쪽으로 가면 컨테이너 ul 복사
-//         //1-2) 복사한 값이 컨테이너의 맨 뒤에가서 붙여넣기
-//         //1-3) 복사한 값을 삭제하고 초기화
-//     setInterval(function(){
-//     // console.log(now);
-//     if(now == 0){
-//     //복사한 값 삭제,초기화
-//     $containner.find(">li").eq(length-1).nextAll().remove();
-//     $containner.css({"left":0}).stop();
-//     //이동
-//     now++;
-//     $containner.stop().animate({"left":move*now*-1},1000);
+     //슬라이드
+        //★ 갖춰야할 명령 1.이동(한칸씩 왼쪽으로) 2.무한반복 3.인덱스값 초기화 4.마우스오버시 반복정지 등등
+        //1-1) 0번 인덱스가 왼쪽으로 가면 컨테이너 ul 복사
+        //1-2) 복사한 값이 컨테이너의 맨 뒤에가서 붙여넣기
+        //1-3) 복사한 값을 삭제하고 초기화
+    setInterval(function(){
+    // console.log(now);
+    if(now == 0){
+    //복사한 값 삭제,초기화
+    $containner.find(">li").eq(length-1).nextAll().remove();
+    $containner.css({"left":0}).stop();
+    //이동
+    now++;
+    $containner.stop().animate({"left":move*now*-1},1000);
     
-//     //컨테이너 복사
-//     var cloneCont = $containner.children().clone();
+    //컨테이너 복사
+    var cloneCont = $containner.children().clone();
     
-//     //컨테이너 붙여넣기
-//     $containner.css({"width":$containner.innerWidth()+(move*length)});
-//     cloneCont.appendTo($containner);
-//     // $containner.css("width",maxWidth);
-//     }else if(now >= 1){
-//     //이동
-//     now++;
-//     $containner.stop().animate({"left":move*now*-1},1000);
-//     }
+    //컨테이너 붙여넣기
+    $containner.css({"width":$containner.innerWidth()+(move*length)});
+    cloneCont.appendTo($containner);
+    // $containner.css("width",maxWidth);
+    }else if(now >= 1){
+    //이동
+    now++;
+    $containner.stop().animate({"left":move*now*-1},1000);
+    }
     
-//     if(now == length){
-//     now = 0;
-//     }
-//     },2000);
+    if(now == length){
+    now = 0;
+    }
+    },2000);
     
-//     };
+    };
     
-// $(document).ready(function(){
-//     slidingMenu();
-// })
+$(document).ready(function(){
+    slidingMenu();
+})
 
 
 ///////////////////////////////////////
